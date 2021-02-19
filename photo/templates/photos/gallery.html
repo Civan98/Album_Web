@@ -20,15 +20,18 @@
 
 </head>
 
-<body class="my-2 mb-0" style="overflow-x: hidden;">
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="container bg-dark text-center">
-                    <span class="h2 text-white">Álbum Web</span>
-                </nav>
-            </div>
+<body class="mb-0" style="overflow-x: hidden;">
+    <div class="row mr-0">
+        <div class="col ">
+            <nav class=" bg-dark text-center mr-0">
+                <span class="h2 text-white">Álbum</span>
+                <span class="h2 text-warning">Web</span>
+            </nav>
         </div>
+    </div>
+    
+
+    <div class="container mb-5">
         <div class="row my-3">
             <div class="col-md-3">
                 <div class="card">
@@ -58,7 +61,7 @@
                                 </small>
                             </div>
                             <a href="{% url 'photo' foto.id %}"
-                                class="btn btn-outline-dark btn-sm m-1 rounded-pill">Ver</a>
+                                class="text-dark btn btn-outline-warning btn-sm m-1 rounded-pill border border-dark ">Ver</a>
                         </div>
                     </div>
                     {% empty %}
