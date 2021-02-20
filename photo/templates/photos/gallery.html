@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'photos/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álbum web</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <style>
-        .image-thumbail {
-            margin-top: 10px;
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
-
-</head>
-
-<body class="mb-0" style="overflow-x: hidden;">
-    <div class="row mr-0">
-        <div class="col ">
-            <nav class=" bg-dark text-center mr-0">
-                <span class="h2 text-white">Álbum</span>
-                <span class="h2 text-warning">Web</span>
-            </nav>
-        </div>
-    </div>
-    
-
+{% block content %}
+<title>Álbum web</title>
     <div class="container mb-5">
         <div class="row my-3">
             <div class="col-md-3">
@@ -53,7 +24,7 @@
                 <div class="row">
                     {% for foto in fotos %}
                     <div class="col-md-4">
-                        <div class="card my-2">
+                        <div class="card my-2 ">
                             <img class="image-thumbail mx-auto d-block" src="{{foto.image.url}}" alt="Card image cap">
                             <div class="card-body">
                                 <small>
@@ -75,12 +46,4 @@
             </div>
         </div>
     </div>
-<!-- por ci me sale espacio en blanco en el footer poner mb-0 en P y en Body -->
-    <footer class="row bg-dark justify-content-center">
-        <div class="col-3">
-            <p class="mb-0 text-white text-center">Elaborado por Ivan Castañeda Contreras</p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    {% endblock %}

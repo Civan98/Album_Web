@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html>
+{% extends 'photos/base.html' %}
+{% block content %}
+<title>Foto</title>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Foto</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-
-<body class="m-5">
-    <div class="container">
+    <div class="container mb-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div style="height: 90vh;">
-                    <img class="mx-auto d-block" style="max-width: 100%; max-height: 100%;" src="{{foto.image.url}}"
+                <!-- CHECAR ESTO style="height: 90vh;" -->
+                <div > 
+                    <img class="mx-auto d-block mt-2" style="max-width: 100%; max-height: 100%;" src="{{foto.image.url}}"
                         alt="Foto">
                     <p style="text-align: justify;">{{foto.description}}</p>
                     <div class="row justify-content-center">
@@ -30,7 +21,4 @@
         </div>
     </div>
 
-
-</body>
-
-</html>
+{% endblock %}

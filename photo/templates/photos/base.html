@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        .image-thumbail {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="mb-0" style="overflow-x: hidden;">
+    <div class="row mr-0">
+        <div class="col">
+            <nav class=" bg-dark text-center mr-0">
+                <span class="h2 text-white">Álbum</span>
+                <span class="h2 text-warning">Web</span>
+            </nav>
+        </div>
+    </div>
+    
+    {% block content %}
+
+
+
+    {% endblock %}
+    <!-- por ci me sale espacio en blanco en el footer poner mb-0 en P y en Body -->
+    <footer class="row bg-dark justify-content-center">
+        <div class="col-md-3">
+            <p class="mb-0 text-white text-center">Elaborado por Ivan Castañeda Contreras</p>
+        </div>
+    </footer>
+</body>
+</html>
