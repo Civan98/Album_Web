@@ -10,9 +10,14 @@
                         Categorías
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Todo</li>
+                        <li class="list-group-item">
+                            <a class="text-dark" href="{% url 'gallery' %}">Todo</a> 
+                        </li>
                         {% for categoria in categorias %}
-                        <li class="list-group-item">{{categoria.name}}</li>
+                        <li class="list-group-item">
+                            <!-- le mando por url la categoria -->
+                            <a class="text-dark" href="{% url 'gallery' %}?category={{categoria.name}}"> {{categoria.name}} </a>
+                        </li>
                         {% endfor %}
                         <li class="list-group-item">
                             <a href="{% url 'add' %}" class="btn btn-dark btn-sm m-1 mx-auto d-block ">Agregar foto</a>
