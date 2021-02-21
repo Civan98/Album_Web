@@ -15,7 +15,7 @@
                         <li class="list-group-item">{{categoria.name}}</li>
                         {% endfor %}
                         <li class="list-group-item">
-                            <a href="{% url 'add' %}" class="btn btn-dark btn-sm m-1 mx-auto d-block ">Agegar foto</a>
+                            <a href="{% url 'add' %}" class="btn btn-dark btn-sm m-1 mx-auto d-block ">Agregar foto</a>
                         </li>
                     </ul>
                 </div>
@@ -47,3 +47,17 @@
         </div>
     </div>
     {% endblock %}
+
+    {% block footer %}
+    <div class="row align-items-end" style="height: 200px;">
+        <div class="col">
+            <footer class="row bg-dark justify-content-center">
+                <div class="col-md-3">
+                     <!-- por ci me sale espacio en blanco en el footer poner mb-0 en P y en Body -->
+                    <p class="mb-0 text-white text-center">Elaborado por Ivan Castañeda Contreras</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    {% endblock %}
+   

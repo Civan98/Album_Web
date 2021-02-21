@@ -7,18 +7,32 @@
             <div class="col-12">
                 <!-- CHECAR ESTO style="height: 90vh;" -->
                 <div > 
-                    <img class="mx-auto d-block mt-2" style="max-width: 100%; max-height: 100%;" src="{{foto.image.url}}"
+                    <img class="mx-auto d-block mt-2 img-thumbnail" style="max-width: 100%; max-height: 100%;" src="{{foto.image.url}}"
                         alt="Foto">
                     <p style="text-align: justify;">{{foto.description}}</p>
+                    <center>
                     <div class="row justify-content-center">
-                        <div class="col-1">
+                        <div class="col-md-1">
                             <a href="{% url 'gallery' %}"
                                 class="btn btn-dark btn-outline-light my-3 border-dark rounded-pill">Regresar</a>
                         </div>
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
 
+{% block footer %}
+<div class="row align-items-end" style="height: 100px;">
+    <div class="col">
+        <footer class="row bg-dark justify-content-center">
+            <div class="col-md-3">
+                 <!-- por ci me sale espacio en blanco en el footer poner mb-0 en P y en Body -->
+                <p class="mb-0 text-white text-center">Elaborado por Ivan Castañeda Contreras</p>
+            </div>
+        </footer>
+    </div>
+</div>
 {% endblock %}

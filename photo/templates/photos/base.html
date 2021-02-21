@@ -18,14 +18,12 @@
     </style>
 </head>
 
-<body class="mb-0" style="overflow-x: hidden;">
+<body class="mb-0" style="overflow-x: hidden;" >
     <div class="row mr-0">
-        <div class="col">
-            <nav class=" bg-dark text-center mr-0">
+            <nav class="col-md-12 bg-dark text-center mr-0">
                 <span class="h2 text-white">Álbum</span>
                 <span class="h2 text-warning">Web</span>
             </nav>
-        </div>
     </div>
     
     {% block content %}
@@ -33,11 +31,10 @@
 
 
     {% endblock %}
-    <!-- por ci me sale espacio en blanco en el footer poner mb-0 en P y en Body -->
-    <footer class="row bg-dark justify-content-center">
-        <div class="col-md-3">
-            <p class="mb-0 text-white text-center">Elaborado por Ivan Castañeda Contreras</p>
-        </div>
-    </footer>
+    
+    {% block footer %}
+    
+    {% endblock %}
+   
 </body>
 </html>
