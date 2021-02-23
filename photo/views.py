@@ -64,7 +64,8 @@ def addPhoto(request):
             description=data['description'],
             image=image
         )
-        
+        lol = cloudinary.uploader.upload(photo.image)
+        print(lol['secure_url'])
 
         return redirect('gallery')
 
