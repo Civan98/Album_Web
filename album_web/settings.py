@@ -132,6 +132,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+#colocar las credenciales de cloudinary agregar 'cloudinary' en INSTALLED_APPS e importar todo lo de cloudinary
 cloudinary.config( 
   cloud_name = "dysntklpm", 
   api_key = "996692758582813", 

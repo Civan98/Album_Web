@@ -43,8 +43,10 @@ def addPhoto(request):
     if request.method == 'POST':
         data = request.POST
         image = request.FILES.get('image')
-        #print(image)
-        
+        #carga de archivo a cloudinary
+        cloudlink = cloudinary.uploader.upload(image)
+        secure_url = cloudlink['secure_url']
+        print(secure_url)
 
         # si la categoria seleccionada es diferente de none, osea cualquier otro menos none
         if data['category'] != 'none':
@@ -62,10 +64,10 @@ def addPhoto(request):
         photo = Photo.objects.create(
             category=category,
             description=data['description'],
-            image=image
+            image=image,
+            link=secure_url
         )
-        lol = cloudinary.uploader.upload(photo.image)
-        print(lol['secure_url'])
+        
 
         return redirect('gallery')
 
