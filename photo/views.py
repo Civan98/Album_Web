@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from .models import Category, Photo
 import requests
 import json
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # Create your views here.
 
@@ -39,17 +43,8 @@ def addPhoto(request):
     if request.method == 'POST':
         data = request.POST
         image = request.FILES.get('image')
-
-        url = "https://api.cloudinary.com/v1_1/dysntklpm/image/upload"
-        payload = {
-            'file': image,
-            'upload_preset': 'capama',
-            'cloud_name': 'dysntklpm',
-            'folder': 'reportes_usuario',
-        }
-        response = requests.post(url, json==payload)
-        response_json = json.loads(response.text)
-        print(response_json) 
+        #print(image)
+        
 
         # si la categoria seleccionada es diferente de none, osea cualquier otro menos none
         if data['category'] != 'none':
@@ -69,6 +64,8 @@ def addPhoto(request):
             description=data['description'],
             image=image
         )
+        
+
         return redirect('gallery')
 
     context = {
