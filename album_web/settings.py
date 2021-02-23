@@ -134,8 +134,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 #colocar las credenciales de cloudinary agregar 'cloudinary' en INSTALLED_APPS e importar todo lo de cloudinary
 cloudinary.config( 
-  cloud_name = "dysntklpm", 
-  api_key = "996692758582813", 
-  api_secret = "dP1DAlf4VdXLb6VNiVU0vkf7LxQ" 
+  cloud_name = "ds4mzfzaf", 
+  api_key = "555973831894371", 
+  api_secret = "-WU01fNXEYWoaESQqH4d0PK_VqM" 
 )
 

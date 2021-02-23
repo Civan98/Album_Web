@@ -45,7 +45,7 @@ def addPhoto(request):
         image = request.FILES.get('image')
         #carga de archivo a cloudinary
         cloudlink = cloudinary.uploader.upload(image)
-        secure_url = cloudlink['secure_url']
+        secure_url = cloudlink['secure_url']#el url que retorna la carga
         print(secure_url)
 
         # si la categoria seleccionada es diferente de none, osea cualquier otro menos none
