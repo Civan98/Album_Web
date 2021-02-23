@@ -43,8 +43,9 @@ def addPhoto(request):
     if request.method == 'POST':
         data = request.POST
         image = request.FILES.get('image')
+
         #carga de archivo a cloudinary
-        cloudlink = cloudinary.uploader.upload(image)
+        cloudlink = cloudinary.uploader.upload(image,folder = "Álbum_web",)
         secure_url = cloudlink['secure_url']#el url que retorna la carga
         print(secure_url)
 
@@ -64,7 +65,7 @@ def addPhoto(request):
         photo = Photo.objects.create(
             category=category,
             description=data['description'],
-            image=image,
+            #image=image,
             link=secure_url
         )
         
