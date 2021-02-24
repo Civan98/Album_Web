@@ -1,1 +1,1 @@
-web: gunicorn ALBUM_WEB.wsgi
+web: gunicorn album_web.wsgi
