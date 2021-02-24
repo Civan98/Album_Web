@@ -78,10 +78,15 @@ WSGI_APPLICATION = 'album_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'de3gcan6pketok',
+        'USER': 'kwmqiuzwhurkbp',
+        'PASSWORD': 'd1ab4237a2c2931c7c9b55f74b638c37c9893d3d88e5bf262144030e3b9cac5e',
+        'HOST': 'ec2-3-95-85-91.compute-1.amazonaws.com',
+        'DATABASE_PORT': '5432',
     }
 }
 
