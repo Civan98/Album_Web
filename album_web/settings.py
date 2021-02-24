@@ -28,7 +28,7 @@ SECRET_KEY = '%sqd1xkqb(d1kd(b=60i&z(8^%1(aqd5v9%1q9z*5-71-bx(cg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['albumshare.herokuapp.com']
 
 
 # Application definition
