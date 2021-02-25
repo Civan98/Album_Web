@@ -29,9 +29,10 @@
                 </div>
             </div>
             <div class="col-md-9 ">
+                
                 <div class="row">
                     {% for foto in fotos %}
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="card my-2 ">
                             <img class="image-thumbail mx-auto d-block" src="{{foto.link}}" alt="Card image cap">
                             <div class="card-body">
@@ -43,8 +44,9 @@
                                     </div>
                                 </small>
                             </div>
-                            <a href="{% url 'photo' foto.id %}"
-                                class="text-dark btn btn-outline-warning btn-sm m-1 rounded-pill border border-dark ">Ver</a>
+                                    <a href="{% url 'photo' foto.id %}"
+                                    class="text-dark btn btn-outline-warning btn-sm m-1 rounded-pill border border-dark ">Ver</a>
+                               
                         </div>
                     </div>
                     {% empty %}
